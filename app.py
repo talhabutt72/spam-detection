@@ -3,6 +3,8 @@ import streamlit as st
 
 
 model = joblib.load(r"C:\Users\hp\Desktop\14 Days 14 Models\Day 4\model.pkl")
+vec = joblib.load(r"C:\Users\hp\Desktop\14 Days 14 Models\Day 4\vec.pkl")
+
 
 
 st.header("Spam Dectetor!!")
@@ -14,5 +16,7 @@ if st.button("Predict"):
 
 
     lower = message.lower()
-    # vectorize_form =  
-    model.predict(message)
+    vectorize_form =  vec.transform([lower])
+    preiction = model.predict(vectorize_form)
+
+    st.subheader(preiction)
