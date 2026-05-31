@@ -2,8 +2,8 @@ import joblib
 import streamlit as st
 
 
-model = joblib.load(r"C:\Users\hp\Desktop\14 Days 14 Models\Day 4\model.pkl")
-vec = joblib.load(r"C:\Users\hp\Desktop\14 Days 14 Models\Day 4\vec.pkl")
+model = joblib.load("model.pkl")
+vec = joblib.load("vec.pkl")
 
 
 
